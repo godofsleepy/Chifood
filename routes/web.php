@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('login');
+// });
+
+Auth::routes();
+
+// Route::get('/', 'HomeController@index')->name('home');
+// Route::get('/food', 'FoodController@index')->name('food');
+// Route::get('/cashier', 'HomeController@cashier')->name('cashier');
+// Route::resources('food', 'FoodController');
+
+Route::resources([
+    '/' => 'HomeController',
+    'food' => 'FoodController',
+    'cashier' => 'CashierController'
+]);
