@@ -6,7 +6,7 @@
     <h1 class="h3 mb-2 text-gray-800">Transaction</h1>
     <p class="mb-4"></a>Data table of Transcation</p>
     <p class="text-right">
-        <a href="#" class="btn btn-danger mb-3">
+        <a href="/transaction/pdf" class="btn btn-danger mb-3">
             <span class="icon text-white-50">
                 <i class="fas fa-trash"></i>
             </span>

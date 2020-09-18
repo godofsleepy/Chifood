@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Transaction;
+use PDF;
 
 class TransactionController extends Controller
 {
@@ -23,6 +24,14 @@ class TransactionController extends Controller
         $transaction = Transaction::with('detailorder')->get();
         // return response()->json($transaction);
         return view('pages.transaction', ['transactions' => $transaction]);
+    }
+
+    public function export_pdf()
+    {
+        $transaction = Transaction::with('detailorder')->get();
+
+        $pdf = PDF::loadview('report_pdf', ['transactions' => $transaction]);
+        return $pdf->stream();
     }
 
     /**

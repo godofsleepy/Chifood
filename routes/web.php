@@ -22,7 +22,7 @@ Auth::routes();
 // Route::get('/', 'HomeController@index')->name('home');
 // Route::get('/food', 'FoodController@index')->name('food');
 // Route::get('/cashier', 'HomeController@cashier')->name('cashier');
-// Route::resources('food', 'FoodController');
+Route::get('/transaction/pdf', 'TransactionController@export_pdf');
 
 Route::resources([
     '/' => 'HomeController',
