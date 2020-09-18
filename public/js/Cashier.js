@@ -83,7 +83,11 @@ $(document).ready(function () {
             success: function (msg) {
                 console.log(msg)
                 alert('berhasil')
-                window.location.reload();
+                // window.location.reload();
+            },
+            error: function (msg) {
+                console.log(msg)
+                alert("There was an error. Try again please!");
             }
         });
     })

@@ -35,7 +35,7 @@ class CashierController extends Controller
         $idOrder = $order->id_order;
 
         $foods = $request->order;
-        $data = array();
+        $data = [];
         foreach ($foods as $food) {
             $data[] = [
                 'id_food' => $food['id'],
@@ -45,8 +45,8 @@ class CashierController extends Controller
                 'description' => "-",
                 'id_order' => $idOrder
             ];
-            DetailOrder::insert($data);
         }
+        DetailOrder::insert($data);
 
         Transaction::create([
             'id_user' => "1",
@@ -54,7 +54,6 @@ class CashierController extends Controller
             'date' => now(),
             'total_price' => $request->totalprice
         ]);
-
-        
+        return $data;
     }
 }
