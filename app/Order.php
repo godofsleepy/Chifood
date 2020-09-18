@@ -9,5 +9,5 @@ class Order extends Model
     //
     protected $table = 'order';
     protected $primaryKey = 'id_order';
-    protected $guarded = ['id_order'];
+    protected $guarded = ['id_orderqwe'];
 }

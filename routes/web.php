@@ -27,5 +27,6 @@ Auth::routes();
 Route::resources([
     '/' => 'HomeController',
     'food' => 'FoodController',
-    'cashier' => 'CashierController'
+    'cashier' => 'CashierController',
+    'transaction' => 'TransactionController',
 ]);

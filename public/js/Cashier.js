@@ -13,6 +13,8 @@ $(document).ready(function () {
         $(this).find("#inputdescription").val(description)
         $(this).find("#inputprice").val(price)
     });
+
+
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -29,6 +31,12 @@ $(document).ready(function () {
         let price = $(this).data('price');
         let image = $(this).data('image');
         console.log("adding to order")
+        for (let i = 0; i < currentOrder.length; i++) {
+            if (currentOrder[i]["id"] == id) {
+                currentOrder[i]["qty"] += 1
+                return
+            }
+        }
         addToCurrentOrder(foodname, id, price, image)
     })
 
