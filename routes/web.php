@@ -23,6 +23,7 @@ Auth::routes();
 // Route::get('/food', 'FoodController@index')->name('food');
 // Route::get('/cashier', 'HomeController@cashier')->name('cashier');
 Route::get('/transaction/pdf', 'TransactionController@export_pdf');
+// Route::post('/transaction/pdf', 'TransactionController@insert');
 
 Route::resources([
     '/' => 'HomeController',

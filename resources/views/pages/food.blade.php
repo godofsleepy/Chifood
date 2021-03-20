@@ -8,13 +8,13 @@
     <p class="text-right">
         <a href="#" class="btn btn-danger mb-3">
             <span class="icon text-white-50">
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-file-pdf" style="color: #ffffff;"></i>
             </span>
             <span class="text">Generate PDF</span>
         </a>
         <a href="#" class="btn btn-danger mb-3" data-toggle="modal" data-target="#addfood">
             <span class="icon text-white-50">
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-plus" style="color: #ffffff;"></i>
             </span>
             <span class="text">Add food</span>
         </a>
@@ -50,9 +50,10 @@
                             <th>{{$food['description']}}</th>
                             <th>Rp {{$food['price']}}</th>
                             <th>
-                                <button class="btn btn-danger btn-circle" data-id="{{$food['id_food']}}" data-foodname="{{$food['foodname']}}" data-image="{{$food['image']}}" data-type="{{$food['type']}}" data-description="{{$food['description']}}" data-price="{{$food['price']}}" data-toggle="modal" data-target="#editfood">
+                                <button class="btn btn-danger btn-circle mb-1" data-id="{{$food['id_food']}}" data-foodname="{{$food['foodname']}}" data-image="{{$food['image']}}" data-type="{{$food['type']}}" data-description="{{$food['description']}}" data-price="{{$food['price']}}" data-toggle="modal" data-target="#editfood">
                                     <i class="fas fa-edit"></i>
                                 </button>
+
                                 <form action="/food/{{ $food['id_food'] }} " method="post">
                                     @csrf
                                     @method('DELETE')
@@ -114,7 +115,7 @@
 
                     </div>
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-danger">Submit</button>
                 </form>
             </div>
 

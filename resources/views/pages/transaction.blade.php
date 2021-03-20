@@ -8,7 +8,7 @@
     <p class="text-right">
         <a href="/transaction/pdf" class="btn btn-danger mb-3">
             <span class="icon text-white-50">
-                <i class="fas fa-trash"></i>
+                <i class="fas fa-file-pdf" style="color: #ffffff;"></i>
             </span>
             <span class="text">Generate PDF</span>
         </a>

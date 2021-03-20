@@ -87,7 +87,6 @@ class FoodController extends Controller
         $request->image->move(public_path('img'), $imageName);
         //
 
-
         Food::find($id)->update([
             'foodname' => $request->name,
             'price' => $request->price,
